@@ -1,1 +1,453 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Primary Page Title & Meta Tags -->
+    <title>Jessy Kinkie | Exclusive Content</title>
+    <meta name="title" content="Jessy Kinkie | Exclusive Content">
+    <meta name="description" content="1,790 photos and 800 videos. Subscribe to unlock exclusive VIP content!">
 
+    <!-- 
+      IMPORTANT FOR TELEGRAM & SOCIAL MEDIA RICH PREVIEWS:
+      To ensure Telegram displays your rich preview image card, replace "https://your-domain.com/" 
+      below with your actual deployed website domain (e.g. "https://jessykinkie.vercel.app/").
+      Telegram requires full absolute https:// links to display image previews!
+    -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://your-domain.com/">
+    <meta property="og:title" content="Jessy Kinkie | Exclusive Content">
+    <meta property="og:description" content="1,790 photos and 800 videos. Subscribe to unlock exclusive VIP content!">
+    <meta property="og:image" content="https://your-domain.com/E698A104-F10E-4A4A-A2BE-46862C21299C_1e55da.jpeg">
+    <meta property="og:image:type" content="image/jpeg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+
+    <!-- Twitter Card Meta Tags -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://your-domain.com/">
+    <meta property="twitter:title" content="Jessy Kinkie | Exclusive Content">
+    <meta property="twitter:description" content="1,790 photos and 800 videos. Subscribe to unlock exclusive VIP content!">
+    <meta property="twitter:image" content="https://your-domain.com/E698A104-F10E-4A4A-A2BE-46862C21299C_1e55da.jpeg">
+
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Font Awesome Icons CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Google Fonts: Poppins & Montserrat -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800;900&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Poppins', 'sans-serif'],
+                        heading: ['Montserrat', 'sans-serif'],
+                    },
+                    colors: {
+                        fancyPink: '#FF2A85',
+                        fancyPinkHover: '#E01A6F',
+                        brightBlue: '#00D2FF',
+                        darkBlue: '#005bea',
+                    },
+                    boxShadow: {
+                        'neon-blue': '0 0 25px rgba(0, 210, 255, 0.6), 0 0 10px rgba(0, 210, 255, 0.4)',
+                        'neon-pink': '0 0 25px rgba(255, 42, 133, 0.6), 0 0 10px rgba(255, 42, 133, 0.4)',
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        body {
+            background: linear-gradient(135deg, #0d0614 0%, #170d2c 40%, #061933 100%);
+            min-height: 100vh;
+            color: #ffffff;
+            font-family: 'Poppins', sans-serif;
+            overflow-x: hidden;
+        }
+
+        /* Ambient Glowing Background Blobs */
+        .ambient-blob-1 {
+            position: absolute;
+            top: -10%;
+            left: -10%;
+            width: 50vw;
+            height: 50vw;
+            background: radial-gradient(circle, rgba(255,42,133,0.35) 0%, rgba(0,0,0,0) 70%);
+            filter: blur(60px);
+            z-index: 0;
+            animation: pulse-slow 8s infinite alternate ease-in-out;
+        }
+
+        .ambient-blob-2 {
+            position: absolute;
+            bottom: -10%;
+            right: -10%;
+            width: 50vw;
+            height: 50vw;
+            background: radial-gradient(circle, rgba(0,210,255,0.3) 0%, rgba(0,0,0,0) 70%);
+            filter: blur(60px);
+            z-index: 0;
+            animation: pulse-slow 10s infinite alternate-reverse ease-in-out;
+        }
+
+        @keyframes pulse-slow {
+            0% { transform: scale(1) translate(0, 0); }
+            100% { transform: scale(1.15) translate(30px, -20px); }
+        }
+
+        /* Glassmorphism Card Style */
+        .glass-card {
+            background: rgba(18, 10, 36, 0.75);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.12);
+        }
+
+        /* Thick Blue Glowing Avatar Ring */
+        .avatar-glow-ring {
+            border: 5px solid #00D2FF;
+            box-shadow: 0 0 25px #00D2FF, inset 0 0 15px #00D2FF;
+        }
+
+        /* Call To Action Button Pulse Glow Animation */
+        .btn-pulse {
+            animation: btn-glow 2.5s infinite;
+        }
+
+        @keyframes btn-glow {
+            0% { box-shadow: 0 0 15px rgba(255, 42, 133, 0.5); }
+            50% { box-shadow: 0 0 30px rgba(0, 210, 255, 0.8); }
+            100% { box-shadow: 0 0 15px rgba(255, 42, 133, 0.5); }
+        }
+
+        /* Keyframes for Infinite Loading Bar */
+        @keyframes infiniteBar {
+            0% { left: -50%; width: 50%; }
+            50% { left: 25%; width: 60%; }
+            100% { left: 100%; width: 50%; }
+        }
+
+        /* Custom Scrollbar styling */
+        ::-webkit-scrollbar {
+            width: 6px;
+        }
+        ::-webkit-scrollbar-track {
+            background: rgba(0, 0, 0, 0.2);
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #00D2FF;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+<body class="relative flex items-center justify-center p-4 sm:p-6 md:p-10">
+
+    <div class="ambient-blob-1 pointer-events-none"></div>
+    <div class="ambient-blob-2 pointer-events-none"></div>
+
+    <main class="relative z-10 w-full max-w-lg mx-auto">
+        <!-- Main Glass Profile Card -->
+        <div class="glass-card rounded-3xl p-6 sm:p-8 text-center shadow-2xl relative overflow-hidden transition-all duration-300 hover:border-pink-500/30">
+            
+            <!-- Glowing Header Backdrop Gradient -->
+            <div class="absolute top-0 left-0 right-0 h-32 bg-gradient-to-r from-fancyPink/20 via-brightBlue/20 to-fancyPink/20 blur-xl pointer-events-none"></div>
+
+            <!-- Profile Avatar with Thick Blue Border -->
+            <div class="relative inline-block mt-2 mb-4">
+                <div class="w-36 h-36 sm:w-40 sm:h-40 rounded-full avatar-glow-ring p-1 overflow-hidden mx-auto transition-transform duration-500 hover:scale-105">
+                    <img 
+                        src="E698A104-F10E-4A4A-A2BE-46862C21299C_1e55da.jpeg" 
+                        alt="Jessy Kinkie Profile Picture" 
+                        class="w-full h-full object-cover rounded-full"
+                        onerror="this.onerror=null; this.src='https://placehold.co/400x400/170d2c/00D2FF?text=Jessy+Kinkie';"
+                    >
+                </div>
+                <!-- Verified Checkmark Badge -->
+                <span class="absolute bottom-2 right-2 bg-brightBlue text-slate-950 w-8 h-8 rounded-full flex items-center justify-center shadow-lg border-2 border-slate-900 text-sm font-bold" title="Verified Creator">
+                    <i class="fa-solid fa-check"></i>
+                </span>
+            </div>
+
+            <!-- Profile Name & User Handle -->
+            <h1 class="text-3xl sm:text-4xl font-extrabold font-heading tracking-tight capitalize text-white drop-shadow-md mb-1">
+                Jessy Kinkie
+            </h1>
+            <p class="text-brightBlue font-medium text-sm sm:text-base tracking-wide mb-6">
+                @jessykinkie_vip <span class="inline-block w-2 h-2 rounded-full bg-green-400 ml-1.5 animate-pulse"></span> <span class="text-xs text-gray-400 font-normal">Active Now</span>
+            </p>
+
+            <!-- Bio Description -->
+            <p class="text-gray-300 text-sm sm:text-base mb-6 leading-relaxed max-w-md mx-auto">
+                Welcome to my official VIP portal ✨ Direct messaging, private uncensored photos, full HD videos & daily updates! 💋
+            </p>
+
+            <div class="grid grid-cols-2 gap-3 sm:gap-4 mb-8">
+                <!-- Photo Counter -->
+                <div class="bg-slate-900/60 border border-fancyPink/30 rounded-2xl p-3 sm:p-4 text-center transition-transform hover:scale-105">
+                    <div class="text-fancyPink text-xl sm:text-2xl mb-1">
+                        <i class="fa-solid fa-camera"></i>
+                    </div>
+                    <div class="text-xl sm:text-2xl font-black font-heading text-white">
+                        1,790
+                    </div>
+                    <div class="text-xs text-gray-400 font-medium uppercase tracking-wider">
+                        Photos
+                    </div>
+                </div>
+
+                <!-- Video Counter -->
+                <div class="bg-slate-900/60 border border-brightBlue/30 rounded-2xl p-3 sm:p-4 text-center transition-transform hover:scale-105">
+                    <div class="text-brightBlue text-xl sm:text-2xl mb-1">
+                        <i class="fa-solid fa-video"></i>
+                    </div>
+                    <div class="text-xl sm:text-2xl font-black font-heading text-white">
+                        800
+                    </div>
+                    <div class="text-xs text-gray-400 font-medium uppercase tracking-wider">
+                        Videos
+                    </div>
+                </div>
+            </div>
+
+            <!-- Perks Summary -->
+            <div class="space-y-2 mb-8 text-left bg-slate-950/40 p-4 rounded-2xl border border-white/5 text-xs sm:text-sm text-gray-300">
+                <div class="flex items-center space-x-2">
+                    <i class="fa-solid fa-circle-check text-brightBlue"></i>
+                    <span>Instant access to all 2,590+ premium posts</span>
+                </div>
+                <div class="flex items-center space-x-2">
+                    <i class="fa-solid fa-circle-check text-brightBlue"></i>
+                    <span>Direct 1-on-1 private messaging privilege</span>
+                </div>
+                <div class="flex items-center space-x-2">
+                    <i class="fa-solid fa-circle-check text-brightBlue"></i>
+                    <span>Full 4K / HD quality playback & downloads</span>
+                </div>
+            </div>
+
+            <button 
+                id="subscribeBtn" 
+                onclick="openModal()" 
+                class="w-full btn-pulse bg-gradient-to-r from-fancyPink via-purple-600 to-brightBlue hover:from-fancyPinkHover hover:to-darkBlue text-white font-extrabold font-heading text-lg sm:text-xl py-4 px-6 rounded-2xl transition-all duration-300 transform hover:-translate-y-1 active:translate-y-0 flex items-center justify-between shadow-2xl group cursor-pointer"
+            >
+                <span class="flex items-center gap-2">
+                    <i class="fa-solid fa-lock-open text-xl group-hover:rotate-12 transition-transform"></i>
+                    <span>SUBSCRIBE TO UNLOCK</span>
+                </span>
+                <span class="bg-black/40 backdrop-blur-md text-brightBlue px-3.5 py-1 rounded-xl text-base font-bold border border-brightBlue/30">
+                    $45
+                </span>
+            </button>
+
+            <!-- Secure Discrete Note -->
+            <div class="mt-4 text-xs text-gray-400 flex items-center justify-center gap-2">
+                <i class="fa-solid fa-shield-halved text-green-400"></i>
+                <span>Discrete & Secure Crypto Payment</span>
+            </div>
+
+        </div>
+
+        <!-- Footer -->
+        <footer class="mt-6 text-center text-xs text-gray-500 font-medium">
+            <p>&copy; 2026 Jessy Kinkie VIP. All rights reserved.</p>
+        </footer>
+    </main>
+
+    <div id="paymentModal" class="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/80 backdrop-blur-md hidden opacity-0 transition-opacity duration-300">
+        
+        <div id="modalCard" class="glass-card w-full max-w-md rounded-3xl p-6 sm:p-8 relative shadow-2xl border border-brightBlue/30 transform scale-95 transition-transform duration-300">
+            
+            <!-- Modal Close Button -->
+            <button onclick="closeModal()" class="absolute top-4 right-4 text-gray-400 hover:text-white bg-slate-800/60 hover:bg-slate-700/80 w-9 h-9 rounded-full flex items-center justify-center transition-colors">
+                <i class="fa-solid fa-xmark text-lg"></i>
+            </button>
+
+            <!-- Standard Payment View -->
+            <div id="modalStandardView">
+                <!-- Modal Header -->
+                <div class="text-center mb-5">
+                    <div class="w-12 h-12 rounded-full bg-amber-500/20 text-amber-400 border border-amber-500/40 flex items-center justify-center mx-auto mb-3 text-2xl shadow-neon-blue">
+                        <i class="fa-brands fa-bitcoin"></i>
+                    </div>
+                    <h2 class="text-2xl font-bold font-heading text-white">Bitcoin VIP Payment</h2>
+                    <p class="text-xs text-gray-300 mt-1">Send exactly <span class="font-bold text-brightBlue">$45 USD</span> in BTC to complete subscription</p>
+                </div>
+
+                <!-- Price Info Box -->
+                <div class="bg-slate-900/80 rounded-2xl p-3.5 border border-white/10 flex items-center justify-between mb-5">
+                    <span class="text-xs text-gray-400 font-medium">Subscription Fee:</span>
+                    <span class="text-lg font-black text-fancyPink">$45.00 <span class="text-xs text-gray-400 font-normal">(USD)</span></span>
+                </div>
+
+                <!-- Copyable Bitcoin Wallet Address Input -->
+                <div class="mb-6">
+                    <label class="block text-xs text-gray-300 mb-2 font-medium flex items-center gap-1.5">
+                        <i class="fa-solid fa-wallet text-brightBlue"></i>
+                        Bitcoin Wallet Address:
+                    </label>
+                    <div class="relative flex items-center">
+                        <input 
+                            type="text" 
+                            id="btcAddressInput" 
+                            readonly 
+                            value="bc1qwac8sah7l8695nsrc3hfrfdnkwr7us6xlvj8wd" 
+                            class="w-full bg-slate-950/90 text-brightBlue font-mono text-xs sm:text-sm p-3.5 pr-28 rounded-xl border border-brightBlue/40 focus:outline-none select-all"
+                        >
+                        <button 
+                            onclick="copyBTCAddress()" 
+                            id="copyBtn" 
+                            class="absolute right-1.5 top-1.5 bottom-1.5 bg-brightBlue hover:bg-blue-400 text-slate-950 font-bold px-3.5 text-xs rounded-lg transition-colors flex items-center gap-1.5 cursor-pointer"
+                        >
+                            <i class="fa-regular fa-copy" id="copyIcon"></i>
+                            <span id="copyText">Copy</span>
+                        </button>
+                    </div>
+                    <p id="copiedNotice" class="text-[11px] text-green-400 mt-1.5 hidden text-right font-medium">
+                        ✓ Address copied to clipboard!
+                    </p>
+                </div>
+
+                <!-- Quick Instructions -->
+                <div class="bg-white/5 p-3.5 rounded-2xl border border-white/5 mb-6">
+                    <p class="text-xs text-gray-300 leading-relaxed">
+                        <span class="font-semibold text-white"><i class="fa-solid fa-circle-info text-brightBlue mr-1"></i> How to pay:</span>
+                        Copy the Bitcoin address above, make a transfer of $45 worth of BTC from your wallet app, then press the button below to verify your subscription.
+                    </p>
+                </div>
+
+                <!-- Payment Completed Button -->
+                <button 
+                    onclick="startInfiniteLoading()" 
+                    class="w-full bg-gradient-to-r from-fancyPink to-brightBlue hover:from-fancyPinkHover hover:to-darkBlue text-white font-bold text-base py-3.5 px-4 rounded-xl transition-all shadow-lg flex items-center justify-center gap-2 cursor-pointer active:scale-95"
+                >
+                    <i class="fa-solid fa-check-circle"></i>
+                    <span>Payment Done / I've Sent the Payment</span>
+                </button>
+            </div>
+
+            <div id="modalLoadingView" class="hidden text-center py-6">
+                <!-- Infinite Glowing Dual Ring Loader -->
+                <div class="relative w-24 h-24 mx-auto mb-6 flex items-center justify-center">
+                    <!-- Ring 1 -->
+                    <div class="absolute inset-0 rounded-full border-4 border-t-fancyPink border-r-transparent border-b-brightBlue border-l-transparent animate-spin"></div>
+                    <!-- Ring 2 -->
+                    <div class="absolute inset-2 rounded-full border-4 border-t-transparent border-r-brightBlue border-b-transparent border-l-fancyPink animate-spin" style="animation-direction: reverse; animation-duration: 1.5s;"></div>
+                    <!-- Central Bitcoin Icon -->
+                    <div class="text-brightBlue text-2xl animate-pulse">
+                        <i class="fa-brands fa-bitcoin"></i>
+                    </div>
+                </div>
+
+                <h3 class="text-xl font-bold font-heading text-white mb-2">Verifying Transaction...</h3>
+                
+                <!-- Dynamic Rotating Status Messages -->
+                <p id="loadingStatusText" class="text-sm text-brightBlue font-mono min-h-[40px] px-2 flex items-center justify-center transition-opacity duration-300">
+                    Connecting to Bitcoin Network...
+                </p>
+
+                <!-- Infinite Progress Bar -->
+                <div class="w-full bg-slate-900 rounded-full h-2 mb-4 overflow-hidden border border-white/10 relative">
+                    <div class="bg-gradient-to-r from-fancyPink via-brightBlue to-fancyPink h-full rounded-full w-1/2 animate-pulse absolute inset-0" style="animation: infiniteBar 2s infinite linear;"></div>
+                </div>
+
+                <p class="text-xs text-gray-400 leading-relaxed max-w-xs mx-auto">
+                    Please do not close or reload this page. Your subscription access will unlock as soon as the transaction is confirmed on the blockchain.
+                </p>
+            </div>
+
+        </div>
+    </div>
+
+    <script>
+        // Modal Element References
+        const paymentModal = document.getElementById('paymentModal');
+        const modalCard = document.getElementById('modalCard');
+        const modalStandardView = document.getElementById('modalStandardView');
+        const modalLoadingView = document.getElementById('modalLoadingView');
+        const loadingStatusText = document.getElementById('loadingStatusText');
+
+        // Modal Trigger Functions
+        function openModal() {
+            paymentModal.classList.remove('hidden');
+            setTimeout(() => {
+                paymentModal.classList.remove('opacity-0');
+                modalCard.classList.remove('scale-95');
+                modalCard.classList.add('scale-100');
+            }, 10);
+        }
+
+        function closeModal() {
+            modalCard.classList.remove('scale-100');
+            modalCard.classList.add('scale-95');
+            paymentModal.classList.add('opacity-0');
+            setTimeout(() => {
+                paymentModal.classList.add('hidden');
+            }, 300);
+        }
+
+        // Copy Bitcoin Address to Clipboard
+        function copyBTCAddress() {
+            const btcInput = document.getElementById('btcAddressInput');
+            const copyText = document.getElementById('copyText');
+            const copyIcon = document.getElementById('copyIcon');
+            const copiedNotice = document.getElementById('copiedNotice');
+
+            // Copy text
+            btcInput.select();
+            btcInput.setSelectionRange(0, 99999);
+            document.execCommand('copy');
+
+            // Feedback UI
+            copyText.textContent = 'Copied!';
+            copyIcon.className = 'fa-solid fa-check';
+            copiedNotice.classList.remove('hidden');
+
+            setTimeout(() => {
+                copyText.textContent = 'Copy';
+                copyIcon.className = 'fa-regular fa-copy';
+                copiedNotice.classList.add('hidden');
+            }, 3000);
+        }
+
+        // Infinite Blockchain Verification Loader Loop
+        let loadingInterval;
+        const statusMessages = [
+            "Broadcasting transaction to Bitcoin nodes...",
+            "Checking mempool for incoming transaction...",
+            "Verifying 0/3 block confirmations...",
+            "Syncing blockchain ledger status...",
+            "Confirming transaction hash signature...",
+            "Awaiting 1st block validation...",
+            "Parsing access tokens...",
+            "Optimizing secure channel connection...",
+            "Re-checking BTC wallet address status..."
+        ];
+
+        function startInfiniteLoading() {
+            // Switch views inside the modal
+            modalStandardView.classList.add('hidden');
+            modalLoadingView.classList.remove('hidden');
+
+            let index = 0;
+            // Infinite status update loop
+            loadingInterval = setInterval(() => {
+                index = (index + 1) % statusMessages.length;
+                loadingStatusText.style.opacity = '0';
+                setTimeout(() => {
+                    loadingStatusText.textContent = statusMessages[index];
+                    loadingStatusText.style.opacity = '1';
+                }, 200);
+            }, 3200);
+        }
+    </script>
+</body>
+</html>
